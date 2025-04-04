@@ -17,6 +17,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Create Tag
+        env:
+          NO_HTML: ${{ secrets.PRIVATE_HTML}}
         id: create_tag
         uses: mathieudutour/github-tag-action@v6.2
         with:
